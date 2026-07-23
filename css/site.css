@@ -177,8 +177,9 @@ section.alt{background:var(--mist)}
 .card{border:1px solid var(--line);border-radius:12px;padding:36px;background:var(--mist)}
 .card h2{font-family:var(--serif);font-size:24px;color:var(--navy);margin-bottom:10px;font-weight:700}
 .card p{font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px}
-.rows{font-size:15.5px;line-height:2.2}
-.rows b{display:inline-block;width:96px;font-size:11px;letter-spacing:.16em;color:var(--muted)}
+.rows{font-size:15px}
+.rows .row{display:flex;gap:12px;align-items:baseline;padding:8px 0}
+.rows b{flex:none;width:78px;font-size:11px;letter-spacing:.16em;color:var(--muted)}
 .rows a{font-weight:600}
 
 /* Close band */
