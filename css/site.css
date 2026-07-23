@@ -46,8 +46,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--azure);outline-offs
 .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
 .btn-ghost:hover{border-color:#fff;color:#fff}
 
-/* Nav — per nav-footer mockup */
-header{background:#fff;border-bottom:1px solid var(--line)}
+/* Nav — per nav-footer mockup; sticky so the CTA stays reachable */
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 36px;max-width:1160px;margin:0 auto}
 .wm{letter-spacing:.24em;font-weight:700;font-size:15px;color:var(--navy);white-space:nowrap}
 .wm span{color:var(--azure);font-weight:400;margin-left:7px}
@@ -130,6 +130,17 @@ section.alt{background:var(--mist)}
 .paper .meta{font-size:13px;color:var(--muted);margin-bottom:20px}
 .soon-pill{display:inline-block;padding:10px 20px;border:1.5px solid var(--azure);border-radius:999px;color:var(--azure);font-size:12.5px;font-weight:700;letter-spacing:.1em}
 .soon-note{margin-top:26px;font-size:14.5px;color:var(--muted);font-style:italic}
+.notify{margin-top:22px}
+.notify p{font-size:14.5px;margin-bottom:10px}
+.notify form{display:flex;gap:10px;max-width:440px;flex-wrap:wrap}
+.notify input[type=email]{flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-family:var(--sans);font-size:15px;color:var(--ink)}
+.notify input[type=email]:focus{outline:2px solid var(--azure);outline-offset:1px;border-color:var(--azure)}
+.notify .btn{padding:12px 22px}
+.notify .ok{font-size:15px;font-weight:600;color:var(--green)}
+.notify{display:flex;gap:10px;margin-top:18px;max-width:480px;flex-wrap:wrap}
+.notify input[type=email]{flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-size:15px;font-family:var(--sans);color:var(--ink)}
+.notify .btn{padding:12px 20px}
+.paper .notify-note{font-size:12.5px;color:var(--muted);margin:10px 0 0;max-width:480px}
 
 /* Steps */
 .stepgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
@@ -223,7 +234,6 @@ footer{background:var(--navy-deep);color:#fff;padding:44px 0 30px}
 }
 @media (max-width:760px){
   .menu-btn{display:block}
-  header{position:relative}
   .links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:18px 24px;gap:16px;z-index:50}
   header.open .links{display:flex}
 }

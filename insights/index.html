@@ -60,6 +60,15 @@
         <p>AI output falls into 4 bands, sorted by whether ground truth exists and what it costs to reach. Materiality sets how much oversight to buy; verifiability sets what kind. Written for the CRO and model-risk reader, with an executive summary that does the reach work.</p>
         <p class="meta">7 pages · ~3,350 words</p>
         <span class="soon-pill">AVAILABLE SOON</span>
+        <div class="notify">
+          <p>Want it the day it ships? Leave your email. No newsletter, no spam.</p>
+          <form id="notify-form" action="https://formspree.io/f/xeeylvqg" method="POST">
+            <input type="hidden" name="_subject" value="Verifiability Gradient notify list">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="email" name="email" required placeholder="you@company.com" aria-label="Email address">
+            <button class="btn btn-azure" type="submit">Notify me</button>
+          </form>
+        </div>
       </div>
     </div>
     <p class="soon-note">More writing is on the way. The next pieces expand on middle-band economics and a worked banding example.</p>
@@ -67,6 +76,22 @@
 </section>
 
 </main>
+
+<script>
+(function(){
+  var f=document.getElementById('notify-form');
+  if(!f||!window.fetch)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){f.parentNode.innerHTML='<p class="ok">You\'re on the list. The paper will land in your inbox the day it ships.</p>';}
+        else{f.submit();}
+      })
+      .catch(function(){f.submit();});
+  });
+})();
+</script>
 
 <footer>
   <div class="wrap">
@@ -83,5 +108,6 @@
   </div>
 </footer>
 
+<script data-goatcounter="https://ardinsights.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
