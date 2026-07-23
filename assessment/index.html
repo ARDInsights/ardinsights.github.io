@@ -68,6 +68,24 @@
         <p>Every AI use case is scored on business value and on data &amp; technical feasibility. Regulatory defensibility is applied as a gate, never a score. Each use case leaves with a verdict: <b>deploy, pilot with controls, or remediate first.</b></p>
       </div>
     </div>
+    <div class="method-flow">
+      <div class="mf-axes">
+        <div class="mf-axis"><div class="an">AXIS 1 · SCORED</div><div class="at">Business value</div></div>
+        <div class="mf-axis"><div class="an">AXIS 2 · SCORED</div><div class="at">Data &amp; technical feasibility</div></div>
+      </div>
+      <div class="mf-arrow"><svg width="34" height="24" viewBox="0 0 34 24" fill="none" aria-hidden="true"><path d="M2 12h26m0 0-8-8m8 8-8 8" stroke="#1F6FB2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mf-gate">
+        <span class="gate-tag">A GATE, NOT A SCORE</span>
+        <div class="gt">Regulatory defensibility</div>
+      </div>
+      <div class="mf-arrow"><svg width="34" height="24" viewBox="0 0 34 24" fill="none" aria-hidden="true"><path d="M2 12h26m0 0-8-8m8 8-8 8" stroke="#1F6FB2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mf-verdicts">
+        <span class="pill deploy">DEPLOY</span>
+        <span class="pill pilot">PILOT WITH CONTROLS</span>
+        <span class="pill remediate">REMEDIATE FIRST</span>
+      </div>
+    </div>
+    <div class="mf-caption">Every use case travels this path and leaves with exactly one verdict.</div>
     <div class="signals">
       <h3>When you need this</h3>
       <ul>
@@ -83,11 +101,12 @@
 <section class="alt">
   <div class="wrap">
     <div class="kick">How it runs</div>
-    <h2 class="h2">Discovery, scoring, verdicts</h2>
-    <div class="stepgrid">
-      <div class="step"><div class="sn">PHASE 1</div><h3 class="st">Discovery</h3><p>Stakeholder interviews plus an inventory of your systems, data flows, and candidate use cases. I look at the data itself, not a slide about the data.</p></div>
-      <div class="step"><div class="sn">PHASE 2</div><h3 class="st">Scoring</h3><p>Each use case is scored on the value and feasibility axes, then run through the defensibility gate: can you explain, evidence, and reconstruct its decisions?</p></div>
-      <div class="step"><div class="sn">PHASE 3</div><h3 class="st">Verdicts &amp; roadmap</h3><p>The decision snapshot, the data-foundation scorecard, and a sequenced roadmap. Where a build is warranted, a proposal comes with it.</p></div>
+    <h2 class="h2">The 2–4 week arc</h2>
+    <div class="arc">
+      <div class="arc-step"><div class="arc-num">1</div><div class="arc-wk">WEEK 1</div><h3 class="arc-t">Discovery &amp; context</h3><p>Stakeholder interviews, regulatory context, and where effort is bleeding.</p></div>
+      <div class="arc-step"><div class="arc-num">2</div><div class="arc-wk">WEEK 1–2</div><h3 class="arc-t">Data foundation review</h3><p>The core: lineage, entity resolution, reconciliation, and controls.</p></div>
+      <div class="arc-step"><div class="arc-num">3</div><div class="arc-wk">WEEK 2–3</div><h3 class="arc-t">Scoring &amp; prioritization</h3><p>Every candidate scored on value, feasibility, and defensibility.</p></div>
+      <div class="arc-step"><div class="arc-num">4</div><div class="arc-wk">WEEK 3–4</div><h3 class="arc-t">Synthesis &amp; readout</h3><p>Opportunity map, roadmap, and an executive decision readout.</p></div>
     </div>
     <div class="tierfoot">What we need from you: a few hours of stakeholder time across the engagement, read access to the systems in scope, and one point of contact.</div>
   </div>
@@ -105,6 +124,30 @@
       <div class="g"><b>Effort-bleed findings:</b> where time and risk are lost</div>
       <div class="g"><b>Sequenced implementation roadmap</b></div>
       <div class="g"><b>Proposal for the build,</b> where warranted</div>
+    </div>
+    <div class="sample">
+      <div class="shd">SAMPLE · EXECUTIVE DECISION SNAPSHOT</div>
+      <div class="srow">
+        <div class="sc">Internal policy &amp; procedure assistant</div>
+        <div class="sp"><span class="pill deploy">DEPLOY</span></div>
+        <div class="sw2">Approved repositories, cited sources, no regulated customer decision.</div>
+      </div>
+      <div class="srow">
+        <div class="sc">AML alert triage &amp; case summarization</div>
+        <div class="sp"><span class="pill pilot">PILOT WITH CONTROLS</span></div>
+        <div class="sw2">High value, but keep it decision-support with logged human approval.</div>
+      </div>
+      <div class="srow">
+        <div class="sc">Reconciliation exception classification</div>
+        <div class="sp"><span class="pill pilot">PILOT WITH CONTROLS</span></div>
+        <div class="sw2">Classify and route breaks, but don't auto-clear or post adjustments.</div>
+      </div>
+      <div class="srow">
+        <div class="sc">Credit decision automation</div>
+        <div class="sp"><span class="pill remediate">REMEDIATE FIRST</span></div>
+        <div class="sw2">Lineage, explainability, and adverse-action evidence not yet sufficient.</div>
+      </div>
+      <div class="sfoot">Illustrative; every engagement is tailored to the client's data and regulatory context. Not legal advice.</div>
     </div>
   </div>
 </section>
