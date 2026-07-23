@@ -18,10 +18,10 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a class="wm" href="/">ARDINSIGHTS<span>LLC</span></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="links">
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" onclick="var h=document.querySelector('header');h.classList.toggle('open');this.setAttribute('aria-expanded',h.classList.contains('open'))"><span></span><span></span><span></span></button>
+    <div class="links" id="nav-links">
       <a href="/assessment/">Assessment</a>
       <a href="/insights/" class="active">Insights</a>
       <a href="/about/">About</a>
@@ -51,7 +51,7 @@
       </div>
       <div>
         <div class="pk">WHITE PAPER</div>
-        <h3>The Verifiability Gradient</h3>
+        <h2>The Verifiability Gradient</h2>
         <p class="psub">Why human oversight breaks when AI output stops being checkable.</p>
         <p>AI output falls into 4 bands, sorted by whether ground truth exists and what it costs to reach. Materiality sets how much oversight to buy; verifiability sets what kind. Written for the CRO and model-risk reader, with an executive summary that does the reach work.</p>
         <p class="meta">7 pages · ~3,350 words</p>

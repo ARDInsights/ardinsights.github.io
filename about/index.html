@@ -18,10 +18,10 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a class="wm" href="/">ARDINSIGHTS<span>LLC</span></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="links">
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" onclick="var h=document.querySelector('header');h.classList.toggle('open');this.setAttribute('aria-expanded',h.classList.contains('open'))"><span></span><span></span><span></span></button>
+    <div class="links" id="nav-links">
       <a href="/assessment/">Assessment</a>
       <a href="/insights/">Insights</a>
       <a href="/about/" class="active">About</a>
@@ -51,12 +51,13 @@
     <p><b>The assessment exists because I've sat on both sides of it.</b> I've built the data foundations AI depends on: entity resolution, reconciliation, lineage, warehouse and lakehouse architecture. And I've watched well-modeled systems fail through the one question nobody posed. That second experience is what clients are actually buying.</p>
     <p>At ARDInsights, the senior principal does the work. The person on the intro call is the person who reads your data dictionaries, interviews your teams, and writes the verdicts. Miami-based, remote-capable, and on-site when the work requires it.</p>
 
+    <h2 class="sr-only">Experience</h2>
     <div class="tl">
-      <div class="t"><div class="role">Founder &amp; Principal</div><div class="org">ARDINSIGHTS LLC · 2022–PRESENT</div><p>Strategic AI and data consultancy for regulated financial services. Advisor to fintechs, marketplaces, and investment managers on data infrastructure and AI deployment.</p></div>
-      <div class="t"><div class="role">Director, Data Engineering &amp; Advanced Analytics</div><div class="org">ENTERPRISE COMMUNITY PARTNERS · 2024–PRESENT</div><p>Led completion of the enterprise data warehouse and a data lakehouse for a 1,200-person national nonprofit; cut time-to-reporting from hours to under 30 minutes.</p></div>
-      <div class="t"><div class="role">Principal Data Scientist</div><div class="org">COMMSAFE AI · 2021–2024</div><p>Built NLP and LLM systems flagging high-risk communications in real time. Work that generated $1.1M in seed funding.</p></div>
-      <div class="t"><div class="role">Senior Data Scientist &amp; Portfolio Manager</div><div class="org">SEMANTEON CAPITAL · 2015–2021</div><p>Machine-learning trading strategies traded with live capital, and the enterprise data management system beneath them.</p></div>
-      <div class="t"><div class="role">Counterparty Credit Risk &amp; Quantitative Research</div><div class="org">FIDELITY INVESTMENTS · 2007–2015</div><p>Default-probability models, systemic-risk metrics, and the risk infrastructure watching $70–120B in trading exposures.</p></div>
+      <div class="t"><h3 class="role">Founder &amp; Principal</h3><div class="org">ARDINSIGHTS LLC · 2022–PRESENT</div><p>Strategic AI and data consultancy for regulated financial services. Advisor to fintechs, marketplaces, and investment managers on data infrastructure and AI deployment.</p></div>
+      <div class="t"><h3 class="role">Director, Data Engineering &amp; Advanced Analytics</h3><div class="org">ENTERPRISE COMMUNITY PARTNERS · 2024–PRESENT</div><p>Led completion of the enterprise data warehouse and a data lakehouse for a 1,200-person national nonprofit; cut time-to-reporting from hours to under 30 minutes.</p></div>
+      <div class="t"><h3 class="role">Principal Data Scientist</h3><div class="org">COMMSAFE AI · 2021–2024</div><p>Built NLP and LLM systems flagging high-risk communications in real time. Work that generated $1.1M in seed funding.</p></div>
+      <div class="t"><h3 class="role">Senior Data Scientist &amp; Portfolio Manager</h3><div class="org">SEMANTEON CAPITAL · 2015–2021</div><p>Machine-learning trading strategies traded with live capital, and the enterprise data management system beneath them.</p></div>
+      <div class="t"><h3 class="role">Counterparty Credit Risk &amp; Quantitative Research</h3><div class="org">FIDELITY INVESTMENTS · 2007–2015</div><p>Default-probability models, systemic-risk metrics, and the risk infrastructure watching $70–120B in trading exposures.</p></div>
     </div>
   </div>
 </section>

@@ -21,10 +21,10 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a class="wm" href="/">ARDINSIGHTS<span>LLC</span></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="links">
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" onclick="var h=document.querySelector('header');h.classList.toggle('open');this.setAttribute('aria-expanded',h.classList.contains('open'))"><span></span><span></span><span></span></button>
+    <div class="links" id="nav-links">
       <a href="/assessment/">Assessment</a>
       <a href="/insights/">Insights</a>
       <a href="/about/">About</a>
@@ -64,12 +64,12 @@
 <section>
   <div class="wrap">
     <div class="kick">The problem</div>
-    <div class="h2">Too cautious to move, or moving blind</div>
+    <h2 class="h2">Too cautious to move, or moving blind</h2>
     <p class="problem-lede">Wherever decisions face scrutiny, a model is only as deployable as the data beneath it, and only as safe as your ability to explain, evidence, and reconstruct its decisions. Most organizations are either too cautious to move, or moving on foundations they can't audit.</p>
     <div class="axes">
-      <div class="axis"><div class="an">AXIS 1</div><div class="at">Business value</div><p>What the use case is actually worth: revenue, cost, risk reduction, measured against your numbers.</p></div>
-      <div class="axis"><div class="an">AXIS 2</div><div class="at">Data &amp; technical feasibility</div><p>Whether the data beneath the use case can support it today, and what it costs to close the gap.</p></div>
-      <div class="axis gate"><div class="gate-tag">A GATE, NOT A SCORE</div><div class="at">Regulatory defensibility</div><p>Can you explain, evidence, and reconstruct the decision for whoever examines it? If not, value doesn't matter yet.</p></div>
+      <div class="axis"><div class="an">AXIS 1</div><h3 class="at">Business value</h3><p>What the use case is actually worth: revenue, cost, risk reduction, measured against your numbers.</p></div>
+      <div class="axis"><div class="an">AXIS 2</div><h3 class="at">Data &amp; technical feasibility</h3><p>Whether the data beneath the use case can support it today, and what it costs to close the gap.</p></div>
+      <div class="axis gate"><div class="gate-tag">A GATE, NOT A SCORE</div><h3 class="at">Regulatory defensibility</h3><p>Can you explain, evidence, and reconstruct the decision for whoever examines it? If not, value doesn't matter yet.</p></div>
     </div>
   </div>
 </section>
@@ -77,7 +77,7 @@
 <section class="alt">
   <div class="wrap">
     <div class="kick">What you get</div>
-    <div class="h2">Six deliverables, one decision</div>
+    <h2 class="h2">Six deliverables, one decision</h2>
     <div class="grid6">
       <div class="g"><b>Executive decision snapshot:</b> deploy / pilot / remediate, with the reason</div>
       <div class="g"><b>Prioritized AI opportunity map</b> (value × readiness)</div>
@@ -92,23 +92,23 @@
 <section>
   <div class="wrap">
     <div class="kick">Engagement &amp; timeline</div>
-    <div class="h2">Three tiers, all fixed fee</div>
+    <h2 class="h2">Three tiers, all fixed fee</h2>
     <div class="tiers">
       <div class="tier">
-        <div class="tname">Focused</div>
+        <h3 class="tname">Focused</h3>
         <div class="price">$10–15K</div>
         <div class="terms">2 weeks · fixed fee</div>
         <p class="scope">One team or one use case. The fastest way to a defensible answer.</p>
       </div>
       <div class="tier featured">
         <div class="flag">MOST COMMON</div>
-        <div class="tname">Standard</div>
+        <h3 class="tname">Standard</h3>
         <div class="price">$20–35K</div>
         <div class="terms">3 weeks · fixed fee</div>
         <p class="scope">Multi-function scope, with the data-foundation work prioritized.</p>
       </div>
       <div class="tier">
-        <div class="tname">Comprehensive</div>
+        <h3 class="tname">Comprehensive</h3>
         <div class="price">$40–50K</div>
         <div class="terms">4 weeks · fixed fee</div>
         <p class="scope">Institution-wide and board-ready.</p>
@@ -121,7 +121,7 @@
 <section class="alt">
   <div class="wrap">
     <div class="kick">Why ARDInsights</div>
-    <div class="h2">Built by an operator</div>
+    <h2 class="h2">Built by an operator</h2>
     <p class="why-body"><b>20 years building these systems, and a hard-won map of where they fail.</b> Deep data-foundation expertise in entity resolution, reconciliation, and lineage. Counterparty credit risk at Fidelity, systematic strategies as a portfolio manager, LLM risk detection as a principal data scientist. Miami-based, remote-capable, and on-site when the work requires it.</p>
   </div>
 </section>

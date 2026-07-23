@@ -18,10 +18,10 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a class="wm" href="/">ARDINSIGHTS<span>LLC</span></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('header').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="links">
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" onclick="var h=document.querySelector('header');h.classList.toggle('open');this.setAttribute('aria-expanded',h.classList.contains('open'))"><span></span><span></span><span></span></button>
+    <div class="links" id="nav-links">
       <a href="/assessment/" class="active">Assessment</a>
       <a href="/insights/">Insights</a>
       <a href="/about/">About</a>
@@ -62,11 +62,11 @@
 <section class="alt">
   <div class="wrap">
     <div class="kick">How it runs</div>
-    <div class="h2">Discovery, scoring, verdicts</div>
+    <h2 class="h2">Discovery, scoring, verdicts</h2>
     <div class="stepgrid">
-      <div class="step"><div class="sn">PHASE 1</div><div class="st">Discovery</div><p>Stakeholder interviews plus an inventory of your systems, data flows, and candidate use cases. I look at the data itself, not a slide about the data.</p></div>
-      <div class="step"><div class="sn">PHASE 2</div><div class="st">Scoring</div><p>Each use case is scored on the value and feasibility axes, then run through the defensibility gate: can you explain, evidence, and reconstruct its decisions?</p></div>
-      <div class="step"><div class="sn">PHASE 3</div><div class="st">Verdicts &amp; roadmap</div><p>The decision snapshot, the data-foundation scorecard, and a sequenced roadmap. Where a build is warranted, a proposal comes with it.</p></div>
+      <div class="step"><div class="sn">PHASE 1</div><h3 class="st">Discovery</h3><p>Stakeholder interviews plus an inventory of your systems, data flows, and candidate use cases. I look at the data itself, not a slide about the data.</p></div>
+      <div class="step"><div class="sn">PHASE 2</div><h3 class="st">Scoring</h3><p>Each use case is scored on the value and feasibility axes, then run through the defensibility gate: can you explain, evidence, and reconstruct its decisions?</p></div>
+      <div class="step"><div class="sn">PHASE 3</div><h3 class="st">Verdicts &amp; roadmap</h3><p>The decision snapshot, the data-foundation scorecard, and a sequenced roadmap. Where a build is warranted, a proposal comes with it.</p></div>
     </div>
   </div>
 </section>
@@ -74,24 +74,24 @@
 <section>
   <div class="wrap">
     <div class="kick">Signature diagnostics</div>
-    <div class="h2">Failure modes a generic review misses</div>
+    <h2 class="h2">Failure modes a generic review misses</h2>
     <p class="lede" style="margin-bottom:6px">Three named diagnostics, drawn from live systems. Each earned its place by catching something real.</p>
     <div class="dcards">
       <div class="dc">
         <div class="num">01</div>
-        <div class="dt">The capacity-blind origination engine</div>
+        <h3 class="dt">The capacity-blind origination engine</h3>
         <p class="db">A lending vehicle budgeted origination against available cash, with no throughput constraint tied to facility size. The modeled book ran to roughly $57M on a $13M facility before anyone asked where the ceiling was.</p>
         <div class="lesson"><b>LESSON</b><br>The constraint that matters is often the one nobody put in the model.</div>
       </div>
       <div class="dc">
         <div class="num">02</div>
-        <div class="dt">Hidden exposure along unmodeled dimensions</div>
+        <h3 class="dt">Hidden exposure along unmodeled dimensions</h3>
         <p class="db">A market-neutral equity book was hedged on every named factor and still bled P&amp;L. Regressing P&amp;L on factor returns found an unhedged energy exposure sitting outside the model.</p>
         <div class="lesson"><b>LESSON</b><br>The model answers every posed question correctly. The loss comes through the unposed one.</div>
       </div>
       <div class="dc">
         <div class="num">03</div>
-        <div class="dt">Aggregate performance that hides the consequential cases</div>
+        <h3 class="dt">Aggregate performance that hides the consequential cases</h3>
         <p class="db">A pre-LLM toxic-language classifier posted a strong headline metric, carried by the easy 99%. The false negatives pooled exactly in the subtle-harassment sliver the system existed to catch.</p>
         <div class="lesson"><b>LESSON</b><br>With fat-tailed consequences, validate the error distribution and weight sampling by consequence, never by volume.</div>
       </div>
