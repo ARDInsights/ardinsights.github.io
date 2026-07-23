@@ -206,6 +206,13 @@ section.alt{background:var(--mist)}
 .cn{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy)}
 .cl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px}
 
+/* Career at a glance strip (About) */
+.career{margin-top:14px;border-top:1px solid var(--line);max-width:780px}
+.career .cr{display:flex;gap:18px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.career .co{flex:1.1;font-weight:600;color:var(--navy)}
+.career .cro{flex:1.6;color:var(--muted)}
+.career .cy{flex:none;color:var(--azure);font-weight:600;font-size:13px}
+
 /* Contact */
 .cgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
 .card{border:1px solid var(--line);border-radius:12px;padding:36px;background:var(--mist)}
@@ -312,6 +319,8 @@ footer{background:var(--navy-deep);color:#fff;padding:44px 0 30px}
   .srow .sp{width:auto}
   .srow .sc{flex:1 1 100%}
   .srow .sw2{flex:1 1 100%}
+  .career .cr{flex-wrap:wrap;gap:4px 12px}
+  .career .co{flex:1 1 100%}
   .arc{flex-direction:column;gap:26px}
   .arc-step{padding-top:0;padding-left:56px;text-align:left}
   .arc-step::before{display:none}
