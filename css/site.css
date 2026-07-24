@@ -211,7 +211,7 @@ section.alt{background:var(--mist)}
 .career .cr{display:flex;gap:18px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
 .career .co{flex:1.1;font-weight:600;color:var(--navy)}
 .career .cro{flex:1.6;color:var(--muted)}
-.career .cy{flex:none;color:var(--azure);font-weight:600;font-size:13px}
+.career .cy{flex:0 0 120px;color:var(--azure);font-weight:600;font-size:13px}
 
 /* Contact */
 .cgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
